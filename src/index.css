@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4a4a4a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6a6a6a;
+}
+
+/* Spotlight animation */
+@keyframes spotlight {
+  from {
+    filter: grayscale(100%) brightness(0.7);
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    filter: grayscale(0%) brightness(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.spotlight-enter {
+  animation: spotlight 0.8s ease-out forwards;
+}
+
+/* Luxury gradient text */
+.luxury-text {
+  background: linear-gradient(135deg, #d4af37, #ffd700, #b8860b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Category specific gradients */
+.women-gradient {
+  background: linear-gradient(135deg, #fb7185, #f472b6, #fbbf24);
+}
+
+.men-gradient {
+  background: linear-gradient(135deg, #64748b, #94a3b8, #cbd5e1);
+}
+
+.kids-gradient {
+  background: linear-gradient(135deg, #fbbf24, #fcd34d, #fed7aa);
+}
+
+.accessories-gradient {
+  background: linear-gradient(135deg, #7f1d1d, #991b1b, #b45309);
+}
+
+/* Enhanced hover effects */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+}
+
+/* Image effects */
+.image-reveal {
+  position: relative;
+  overflow: hidden;
+}
+
+.image-reveal::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+  z-index: 1;
+}
+
+.image-reveal:hover::before {
+  left: 100%;
+}
+
+/* Smooth page transitions */
+.page-enter {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.3s ease-out;
+}

@@ -1,0 +1,11 @@
+{
+  "fields": {
+    "id": {"stringValue": "product-1"},
+    "name": {"stringValue": "Wireless Headphones"},
+    "price": {"doubleValue": 99.99},
+    "description": {"stringValue": "Premium wireless headphones with noise cancellation"},
+    "image": {"stringValue": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500"},
+    "category": {"stringValue": "electronics"},
+    "inStock": {"booleanValue": true}
+  }
+}
